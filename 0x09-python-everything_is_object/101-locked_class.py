@@ -5,5 +5,5 @@
 
 class LockedClass:
     """Restricts new attributes to 'first_name' only."""
-    
+
     __slots__ = ["first_name"]
