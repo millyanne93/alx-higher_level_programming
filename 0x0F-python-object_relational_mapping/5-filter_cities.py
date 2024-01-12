@@ -15,7 +15,7 @@ if __name__ == "__main__":
         db=sys.argv[3],
         port=3306
     )
-    
+
     # Get the state name from command line arguments
     state_name = sys.argv[4]
 
@@ -26,7 +26,7 @@ if __name__ == "__main__":
                  ON states.id = cities.state_id\
                  WHERE states.name LIKE BINARY (%s) ORDER BY cities.id ASC",
                 (state_name,))
-    
+
     # Fetch all rows and close the cursor and database connection
     table = cur.fetchall()
     cur.close()
