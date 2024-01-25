@@ -1,4 +1,4 @@
 #!/bin/bash
 # Send a GET request with a custom header to the URL and display the body of the response
-curl -sH "X-School-User-Id: 98" "$1"
+curl "$1" -sX GET -H "X-School-User-Id: 98"
 
