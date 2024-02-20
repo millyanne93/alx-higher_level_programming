@@ -10,11 +10,6 @@ request.get(apiUrl, (error, response, body) => {
     console.log(error);
     return;
   }
-  
-  if (response.statusCode !== 200) {
-    console.error(`Error: ${response.statusCode}`);
-    return;
-  }
 
   const movie = JSON.parse(body);
   console.log(movie.title);
